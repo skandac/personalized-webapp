@@ -1537,6 +1537,13 @@ body {
     }
 }
 
+/* h1.section-title,
+h2.section-title,
+.section-title,
+.section-subtitle {
+  text-align: center !important;
+} */
+
 /* Dark mode support - Disabled for now to ensure proper contrast */
 /*
 @media (prefers-color-scheme: dark) {
