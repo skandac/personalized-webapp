@@ -173,18 +173,60 @@ if (contactForm) {
             return;
         }
         
-        // Simulate form submission with loading state
+        // Real submission: prefer a POST to a configured endpoint (e.g., Formspree).
         const submitBtn = this.querySelector('button[type="submit"]');
         const originalText = submitBtn.innerHTML;
         submitBtn.innerHTML = '<span>Sending...</span>';
         submitBtn.disabled = true;
-        
-        setTimeout(() => {
-            showNotification('Thank you for your message! I\'ll get back to you soon.', 'success');
-            this.reset();
+
+        const endpoint = this.dataset.endpoint || ''; // set data-endpoint on the form if using Formspree
+
+        if (endpoint) {
+            // POST form data as JSON
+            fetch(endpoint, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ name, email, subject, message })
+            }).then(res => {
+                if (res.ok) {
+                    showNotification('Thank you for your message! I\'ll get back to you soon.', 'success');
+                    contactForm.reset();
+                } else {
+                    return res.text().then(text => Promise.reject(text || 'Submission failed'));
+                }
+            }).catch(err => {
+                console.error('Form submission error:', err);
+                showNotification('Submission failed. Opening your mail client as fallback.', 'error');
+                openMailClient(name, email, subject, message);
+            }).finally(() => {
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+            });
+        } else {
+            // No endpoint configured — fallback to mailto (opens user's mail client)
+            openMailClient(name, email, subject, message);
+            showNotification('Opening your mail client to send the message (fallback).', 'info');
             submitBtn.innerHTML = originalText;
             submitBtn.disabled = false;
-        }, 2000);
+            this.reset();
+        }
+    });
+}
+
+// Helper: open user's mail client with prefilled content
+function openMailClient(name, email, subject, message) {
+    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
+    const mailto = `mailto:${encodeURIComponent('skanda473@gmail.com')}?subject=${encodeURIComponent(subject)}&body=${body}`;
+    window.location.href = mailto;
+}
+
+// Resume download button (in case you want to trigger via JS)
+const resumeLink = document.getElementById('download-resume');
+if (resumeLink) {
+    resumeLink.addEventListener('click', (e) => {
+        // allow default link behavior; this handler is here if you want analytics or confirmation later
     });
 }
 
