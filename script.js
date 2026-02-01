@@ -192,6 +192,82 @@ function createScrollToTop() {
 createScrollToTop();
 
 // ========================================
+// Mouse Glow Effect
+// ========================================
+const mouseGlow = document.getElementById('mouseGlow');
+let mouseX = 0, mouseY = 0, glowX = 0, glowY = 0;
+
+document.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    mouseGlow.style.opacity = '1';
+});
+
+document.addEventListener('mouseleave', () => {
+    mouseGlow.style.opacity = '0';
+});
+
+function animateGlow() {
+    glowX += (mouseX - glowX) * 0.08;
+    glowY += (mouseY - glowY) * 0.08;
+    mouseGlow.style.left = glowX + 'px';
+    mouseGlow.style.top = glowY + 'px';
+    requestAnimationFrame(animateGlow);
+}
+animateGlow();
+
+// ========================================
+// Parallax Background Orbs on Scroll
+// ========================================
+window.addEventListener('scroll', () => {
+    const scrollY = window.pageYOffset;
+    const orbs = document.querySelectorAll('.gradient-orb');
+    if (orbs.length) {
+        orbs[0].style.transform = `translate(${Math.sin(scrollY * 0.002) * 40}px, ${scrollY * 0.08}px) scale(1)`;
+        orbs[1].style.transform = `translate(${Math.cos(scrollY * 0.002) * -30}px, ${scrollY * -0.06}px) scale(1)`;
+        if (orbs[2]) {
+            orbs[2].style.transform = `translate(-50%, ${Math.sin(scrollY * 0.003) * 30}px) scale(1)`;
+        }
+    }
+});
+
+// ========================================
+// Tilt Effect on Project Cards
+// ========================================
+document.querySelectorAll('.project-card').forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        const rotateX = (y - centerY) / centerY * -3;
+        const rotateY = (x - centerX) / centerX * 3;
+        card.style.transform = `translateY(-8px) perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+    });
+
+    card.addEventListener('mouseleave', () => {
+        card.style.transform = 'translateY(0) perspective(1000px) rotateX(0) rotateY(0)';
+    });
+});
+
+// ========================================
+// Magnetic Hover on Buttons
+// ========================================
+document.querySelectorAll('.btn').forEach(btn => {
+    btn.addEventListener('mousemove', (e) => {
+        const rect = btn.getBoundingClientRect();
+        const x = e.clientX - rect.left - rect.width / 2;
+        const y = e.clientY - rect.top - rect.height / 2;
+        btn.style.transform = `translate(${x * 0.15}px, ${y * 0.15}px) scale(1.02)`;
+    });
+
+    btn.addEventListener('mouseleave', () => {
+        btn.style.transform = 'translate(0, 0) scale(1)';
+    });
+});
+
+// ========================================
 // Page Load Fade-In
 // ========================================
 window.addEventListener('load', () => {
