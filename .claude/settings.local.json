@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(tree:*)",
+      "WebFetch(domain:personalized-webapp.vercel.app)",
+      "Bash(gh repo view:*)"
+    ]
+  }
+}
