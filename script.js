@@ -217,19 +217,50 @@ function animateGlow() {
 animateGlow();
 
 // ========================================
-// Parallax Background Orbs on Scroll
+// Vanta.js Birds Background
 // ========================================
-window.addEventListener('scroll', () => {
-    const scrollY = window.pageYOffset;
-    const orbs = document.querySelectorAll('.gradient-orb');
-    if (orbs.length) {
-        orbs[0].style.transform = `translate(${Math.sin(scrollY * 0.002) * 40}px, ${scrollY * 0.08}px) scale(1)`;
-        orbs[1].style.transform = `translate(${Math.cos(scrollY * 0.002) * -30}px, ${scrollY * -0.06}px) scale(1)`;
-        if (orbs[2]) {
-            orbs[2].style.transform = `translate(-50%, ${Math.sin(scrollY * 0.003) * 30}px) scale(1)`;
-        }
-    }
-});
+if (typeof VANTA !== 'undefined' && typeof THREE !== 'undefined') {
+    VANTA.BIRDS({
+        el: "#home",
+        THREE: THREE,
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        scale: 1.00,
+        scaleMobile: 1.00,
+        backgroundColor: 0xf5f5f7,
+        color1: 0x0071e3,
+        color2: 0x5856d6,
+        quantity: 4.00,
+        backgroundAlpha: 0.0,
+        birdSize: 1.20,
+        wingSpan: 20.00,
+        speedLimit: 4.00,
+        separation: 30.00,
+        alignment: 30.00,
+        cohesion: 25.00
+    });
+
+    VANTA.DOTS({
+        el: "#contact",
+        THREE: THREE,
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        scale: 1.00,
+        scaleMobile: 1.00,
+        backgroundColor: 0x1a1a2e,
+        color: 0x0071e3,
+        color2: 0x5856d6,
+        size: 3.0,
+        spacing: 20.00,
+        showLines: false
+    });
+}
 
 // ========================================
 // Tilt Effect on Project Cards

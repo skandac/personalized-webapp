@@ -169,82 +169,10 @@ body {
     justify-content: center;
     position: relative;
     overflow: hidden;
-    background: #fbfbfd;
+    background: #f5f5f7;
 }
 
-/* Animated Background Container */
-.hero-bg {
-    position: absolute;
-    inset: 0;
-    overflow: hidden;
-    pointer-events: none;
-}
-
-/* Floating Gradient Orbs */
-.gradient-orb {
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(80px);
-    opacity: 0.5;
-    will-change: transform;
-}
-
-.orb-1 {
-    width: 500px;
-    height: 500px;
-    background: radial-gradient(circle, rgba(0, 113, 227, 0.15) 0%, transparent 70%);
-    top: -10%;
-    left: -5%;
-    animation: floatOrb1 14s ease-in-out infinite;
-}
-
-.orb-2 {
-    width: 400px;
-    height: 400px;
-    background: radial-gradient(circle, rgba(88, 86, 214, 0.12) 0%, transparent 70%);
-    bottom: -10%;
-    right: -5%;
-    animation: floatOrb2 18s ease-in-out infinite;
-}
-
-.orb-3 {
-    width: 300px;
-    height: 300px;
-    background: radial-gradient(circle, rgba(52, 199, 89, 0.08) 0%, transparent 70%);
-    top: 40%;
-    left: 50%;
-    animation: floatOrb3 20s ease-in-out infinite;
-}
-
-@keyframes floatOrb1 {
-    0%, 100% { transform: translate(0, 0) scale(1); }
-    25% { transform: translate(80px, 40px) scale(1.1); }
-    50% { transform: translate(30px, 80px) scale(0.95); }
-    75% { transform: translate(-40px, 30px) scale(1.05); }
-}
-
-@keyframes floatOrb2 {
-    0%, 100% { transform: translate(0, 0) scale(1); }
-    25% { transform: translate(-60px, -30px) scale(1.05); }
-    50% { transform: translate(-30px, -70px) scale(1.1); }
-    75% { transform: translate(40px, -40px) scale(0.95); }
-}
-
-@keyframes floatOrb3 {
-    0%, 100% { transform: translate(-50%, 0) scale(1); }
-    33% { transform: translate(calc(-50% + 60px), -50px) scale(1.15); }
-    66% { transform: translate(calc(-50% - 40px), 40px) scale(0.9); }
-}
-
-/* Dot Grid Pattern */
-.dot-grid {
-    position: absolute;
-    inset: 0;
-    background-image: radial-gradient(circle, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
-    background-size: 32px 32px;
-    mask-image: radial-gradient(ellipse 60% 60% at 50% 50%, black 30%, transparent 70%);
-    -webkit-mask-image: radial-gradient(ellipse 60% 60% at 50% 50%, black 30%, transparent 70%);
-}
+/* Vanta.js canvas sits inside .hero absolutely; ensure content is above it */
 
 .hero-container {
     max-width: 1120px;
@@ -252,7 +180,11 @@ body {
     padding: 0 24px;
     text-align: center;
     position: relative;
-    z-index: 1;
+    z-index: 2;
+}
+
+.hero .scroll-indicator {
+    z-index: 2;
 }
 
 .hero-content {
@@ -1064,8 +996,15 @@ body {
    Certifications Section
    ======================================== */
 .certifications {
-    padding: 140px 0;
-    background: #fff;
+    padding: 140px 0 200px;
+    background: linear-gradient(to bottom, #fff 0%, #fff 40%, #1a1a2e 100%);
+    position: relative;
+}
+
+.certifications .section-header,
+.certifications .certs-grid {
+    position: relative;
+    z-index: 1;
 }
 
 .certs-grid {
@@ -1139,23 +1078,18 @@ body {
    ======================================== */
 .contact {
     padding: 140px 0;
-    background: #fbfbfd;
+    background: #1a1a2e;
     position: relative;
     overflow: hidden;
+    color: #f5f5f7;
 }
 
-.contact::before {
-    content: '';
-    position: absolute;
-    bottom: 10%;
-    right: -10%;
-    width: 500px;
-    height: 500px;
-    background: radial-gradient(circle, rgba(88, 86, 214, 0.04) 0%, transparent 70%);
-    border-radius: 50%;
-    filter: blur(60px);
-    animation: floatOrb1 17s ease-in-out infinite;
-    pointer-events: none;
+.contact .section-title {
+    color: #f5f5f7;
+}
+
+.contact .section-label {
+    color: #5ac8fa;
 }
 
 .contact-content {
@@ -1170,12 +1104,12 @@ body {
     font-size: 1.75rem;
     font-weight: 700;
     margin-bottom: 12px;
-    color: #1d1d1f;
+    color: #f5f5f7;
     letter-spacing: -0.02em;
 }
 
 .contact-info > p {
-    color: #86868b;
+    color: #a1a1a6;
     margin-bottom: 32px;
     line-height: 1.7;
     font-size: 1rem;
@@ -1196,7 +1130,7 @@ body {
 }
 
 .contact-method:hover {
-    background: rgba(0, 113, 227, 0.04);
+    background: rgba(255, 255, 255, 0.05);
 }
 
 .contact-method i {
@@ -1214,13 +1148,13 @@ body {
 
 .contact-method h4 {
     font-weight: 600;
-    color: #1d1d1f;
+    color: #f5f5f7;
     margin-bottom: 2px;
     font-size: 0.9375rem;
 }
 
 .contact-method p {
-    color: #86868b;
+    color: #a1a1a6;
     margin: 0;
     font-size: 0.875rem;
 }
@@ -1233,8 +1167,8 @@ body {
 .social-link {
     width: 44px;
     height: 44px;
-    background: #fff;
-    color: #1d1d1f;
+    background: rgba(255, 255, 255, 0.08);
+    color: #f5f5f7;
     border-radius: 12px;
     display: flex;
     align-items: center;
@@ -1242,7 +1176,7 @@ body {
     text-decoration: none;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     font-size: 1.125rem;
-    border: 1px solid rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .social-link:hover {
@@ -1254,10 +1188,12 @@ body {
 }
 
 .contact-form {
-    background: #fff;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     padding: 36px;
     border-radius: 20px;
-    border: 1px solid rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .form-group {
@@ -1268,26 +1204,26 @@ body {
 .form-group textarea {
     width: 100%;
     padding: 14px 18px;
-    border: 1.5px solid rgba(0, 0, 0, 0.08);
+    border: 1.5px solid rgba(255, 255, 255, 0.1);
     border-radius: 12px;
     font-family: inherit;
     font-size: 0.9375rem;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    background: #fbfbfd;
-    color: #1d1d1f;
+    background: rgba(255, 255, 255, 0.06);
+    color: #f5f5f7;
 }
 
 .form-group input::placeholder,
 .form-group textarea::placeholder {
-    color: #adadb1;
+    color: #6e6e73;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
     border-color: #0071e3;
-    background: #fff;
-    box-shadow: 0 0 0 4px rgba(0, 113, 227, 0.1);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 0 4px rgba(0, 113, 227, 0.15);
 }
 
 .form-group textarea {
@@ -1299,7 +1235,7 @@ body {
    Footer
    ======================================== */
 .footer {
-    background: #1d1d1f;
+    background: #12121f;
     color: #86868b;
     padding: 48px 0;
 }
