@@ -3,7 +3,8 @@
     "allow": [
       "Bash(tree:*)",
       "WebFetch(domain:personalized-webapp.vercel.app)",
-      "Bash(gh repo view:*)"
+      "Bash(gh repo view:*)",
+      "Bash(curl:*)"
     ]
   }
 }

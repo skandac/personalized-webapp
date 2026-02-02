@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skanda Chandrashekar - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="mouse-glow" id="mouseGlow"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Skanda<span class="logo-dot">.</span></h2>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <p class="hero-label reveal">Hello, I'm</p>
+                <h1 class="hero-title reveal reveal-delay-1">
+                    Skanda Chandrashekar<span class="hero-dot">.</span>
+                </h1>
+                <div class="hero-profile reveal reveal-delay-1">
+                    <div class="profile-card">
+                        <div class="profile-image">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+                </div>
+                <p class="hero-subtitle reveal reveal-delay-2">
+                    Designer & Developer
+                </p>
+                <p class="hero-description reveal reveal-delay-3">
+                    I design and develop robust software and cloud solutions, specializing in distributed systems, automation, and network technologies. Currently persuing MS in Computer Science, UMass Amherst.
+                 </p>
+                <div class="hero-buttons reveal reveal-delay-4">
+                    <a href="#projects" class="btn btn-primary">
+                        View My Work
+                        <span class="btn-arrow">&rarr;</span>
+                    </a>
+                    <a href="#contact" class="btn btn-ghost">Get In Touch</a>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label reveal">Who I Am</span>
+                <h2 class="section-title reveal reveal-delay-1">About Me</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text reveal reveal-delay-2">
+                    <p class="about-lead">
+                        I'm a current UMass student with 3+ years of industry experience at Oracle, passionate about building innovative solutions and delivering beautiful user experiences.
+                    </p>
+                    <p>
+                        With expertise in cloud distributed infrastructure, Backend development, and AI/ML technologies, I bring ideas to life through clean code and thoughtful design. Currently deepening my knowledge at UMass Amherst, working on projects spanning LLMs, distributed systems, and modern web applications.
+                    </p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat reveal reveal-delay-2">
+                        <h3 class="stat-number" data-count="3">0</h3>
+                        <span class="stat-plus">+</span>
+                        <p>Years at Oracle</p>
+                    </div>
+                    <div class="stat reveal reveal-delay-3">
+                        <h3 class="stat-number" data-count="40">0</h3>
+                        <span class="stat-percent">%</span>
+                        <p>Faster Troubleshooting</p>
+                    </div>
+                    <div class="stat reveal reveal-delay-4">
+                        <h3 class="stat-number" data-count="3">0</h3>
+                        <span class="stat-plus">+</span>
+                        <p>Publications</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label reveal">My Journey</span>
+                <h2 class="section-title reveal reveal-delay-1">Experience & Education</h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item reveal reveal-delay-2">
+                    <div class="timeline-marker">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Expected May 2027</span>
+                        <h3>MS Computer Science</h3>
+                        <p class="timeline-org">UMass Amherst</p>
+                        <p>Focusing on advanced topics in software systems, AI/ML, and distributed computing.</p>
+                    </div>
+                </div>
+                <div class="timeline-item reveal reveal-delay-3">
+                    <div class="timeline-marker">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">August 2022 &ndash; August 2025</span>
+                        <h3>Technical Analyst 1</h3>
+                        <p class="timeline-org">Oracle Inc.</p>
+                        <ul>
+                            <li>Accelerated troubleshooting efficiency by 40% through systematic analysis</li>
+                            <li>Automated testing pipelines with Python, Bash, and XML &mdash; reduced outages by 20%</li>
+                            <li>Improved system reliability by 50% across cloud infrastructure services</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item reveal reveal-delay-4">
+                    <div class="timeline-marker">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">January 2022 &ndash; June 2022</span>
+                        <h3>Project Intern</h3>
+                        <p class="timeline-org">Oracle Inc.</p>
+                        <ul>
+                            <li>Built 3 major features for internal tools</li>
+                            <li>Reduced bugs by 60% through rigorous testing and code reviews</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item reveal reveal-delay-2">
+                    <div class="timeline-marker">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">August 2020 &ndash; September 2020</span>
+                        <h3>Student Intern</h3>
+                        <p class="timeline-org">Cisco Center of Excellence</p>
+                        <ul>
+                            <li>Developed a Python-based smart parking system using YOLOv5 and KNN for real-time vehicle detection</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item reveal reveal-delay-3">
+                    <div class="timeline-marker">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">August 2018 &ndash; August 2022</span>
+                        <h3>Bachelor of Engineering</h3>
+                        <p class="timeline-org">RVCE, Bangalore &bull; GPA: 3.7 / 4.0</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label reveal">My Work</span>
+                <h2 class="section-title reveal reveal-delay-1">Featured Projects</h2>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card reveal reveal-delay-2">
+                    <div class="project-image">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Distributed Job Scheduler</h3>
+                        <p>Cloud-native distributed job scheduler using Kafka for event streaming and Redis for state management, with gRPC for low-latency communication across worker nodes. Implements Leader Election and Worker Heartbeats for at-least-once delivery and zero job loss during node failures.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Kafka</span>
+                            <span class="tech-tag">Redis</span>
+                            <span class="tech-tag">gRPC</span>
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">FastAPI</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/skandac/distributed-job-scheduler" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card reveal reveal-delay-3">
+                    <div class="project-image">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>UMass Marketplace</h3>
+                        <p>Full-stack student marketplace with CI/CD pipelines, enabling UMass students to buy and sell items seamlessly.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Spring Boot</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">CI/CD</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/shivraj-S-bhatti/umass-marketplace" class="project-link">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card reveal reveal-delay-2">
+                    <div class="project-image">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>LLM-based Resume Analyzer</h3>
+                        <p>RAG pipeline that intelligently analyzes resumes using LangChain, FAISS vector search, and OpenAI APIs for semantic matching.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">LangChain</span>
+                            <span class="tech-tag">FAISS</span>
+                            <span class="tech-tag">OpenAI API</span>
+                            <span class="tech-tag">Python</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/skandac/LLM-based-personalized-resume-analyzer-using-RAG-pipeline" class="project-link">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card reveal reveal-delay-3">
+                    <div class="project-image">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Large Language Model (GPT-style)</h3>
+                        <p>Language models implemented from scratch using PyTorch, progressing from linear baselines to optimized Transformer architectures (~10M params) for character-level and word-level text generation on Tiny Shakespeare, Penn Treebank, and WikiText-2 datasets.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">PyTorch</span>
+                            <span class="tech-tag">Transformers</span>
+                            <span class="tech-tag">NLP</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/skandac/Large-Language-Model-GPT-style" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card reveal reveal-delay-2">
+                    <div class="project-image">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Login Registration Backend</h3>
+                        <p>Secure authentication system with JWT, OAuth2, and two-factor authentication, deployed on AWS with Docker.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Spring Boot</span>
+                            <span class="tech-tag">JWT</span>
+                            <span class="tech-tag">OAuth2</span>
+                            <span class="tech-tag">AWS</span>
+                            <span class="tech-tag">Docker</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/skandac/Login-Registration-System" class="project-link">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card reveal reveal-delay-3">
+                    <div class="project-image">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>FastAPI Chatbot</h3>
+                        <p>Context-aware chatbot powered by Cloudflare Workers AI backend with persistent memory for natural conversations.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">FastAPI</span>
+                            <span class="tech-tag">Cloudflare Workers</span>
+                            <span class="tech-tag">Python</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/skandac/cf_ai_fastapi_chatbot" class="project-link">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card reveal reveal-delay-4">
+                    <div class="project-image">
+                        <i class="fas fa-image"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Diffusion Models</h3>
+                        <p>Implementation of diffusion models and normalizing flows for generative image synthesis, exploring denoising diffusion probabilistic models from the ground up.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">PyTorch</span>
+                            <span class="tech-tag">Jupyter</span>
+                            <span class="tech-tag">Deep Learning</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/skandac/Diffusion-models" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label reveal">What I Use</span>
+                <h2 class="section-title reveal reveal-delay-1">Skills & Technologies</h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category reveal reveal-delay-2">
+                    <div class="skill-category-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Languages</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fab fa-python"></i>
+                            <span>Python</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-database"></i>
+                            <span>SQL</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-code"></i>
+                            <span>C++</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-java"></i>
+                            <span>Java</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-terminal"></i>
+                            <span>Bash</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category reveal reveal-delay-3">
+                    <div class="skill-category-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>ML & Data</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fas fa-fire"></i>
+                            <span>PyTorch</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-table"></i>
+                            <span>NumPy</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-table"></i>
+                            <span>Pandas</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-square-root-alt"></i>
+                            <span>SciPy</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-cogs"></i>
+                            <span>Scikit-learn</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-robot"></i>
+                            <span>Hugging Face</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-link"></i>
+                            <span>LangChain</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-project-diagram"></i>
+                            <span>RAG</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-vector-square"></i>
+                            <span>FAISS</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category reveal reveal-delay-4">
+                    <div class="skill-category-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3>Cloud & Infrastructure</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fas fa-network-wired"></i>
+                            <span>TCP/IP</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-docker"></i>
+                            <span>Docker</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-dharmachakra"></i>
+                            <span>Kubernetes</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-stream"></i>
+                            <span>Kafka</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-memory"></i>
+                            <span>Redis</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-aws"></i>
+                            <span>AWS</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-cloud"></i>
+                            <span>Oracle OCI</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-linux"></i>
+                            <span>Linux/Unix</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-server"></i>
+                            <span>Virtualization</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category reveal reveal-delay-2">
+                    <div class="skill-category-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Frameworks & Tools</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fas fa-leaf"></i>
+                            <span>Spring Boot</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-react"></i>
+                            <span>React</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-exchange-alt"></i>
+                            <span>REST APIs</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-bolt"></i>
+                            <span>FastAPI</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-flask"></i>
+                            <span>Flask</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-database"></i>
+                            <span>PostgreSQL</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-git-alt"></i>
+                            <span>Git</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-satellite-dish"></i>
+                            <span>gRPC</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-sitemap"></i>
+                            <span>System Design</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-cubes"></i>
+                            <span>Distributed Systems</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications" class="publications">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label reveal">Research</span>
+                <h2 class="section-title reveal reveal-delay-1">Publications</h2>
+            </div>
+            <div class="publications-list">
+                <a href="https://ieeexplore.ieee.org/document/10126956" target="_blank" class="publication-item reveal reveal-delay-2">
+                    <div class="pub-icon"><i class="fas fa-file-alt"></i></div>
+                    <div class="pub-content">
+                        <h3>Secure Hashing using BCrypt for Cryptographic Applications</h3>
+                        <p class="pub-venue">IEEE NKCon 2022</p>
+                        <span class="pub-link">View Paper <i class="fas fa-external-link-alt"></i></span>
+                    </div>
+                </a>
+                <a href="https://ieeexplore.ieee.org/document/9663634" target="_blank" class="publication-item reveal reveal-delay-3">
+                    <div class="pub-icon"><i class="fas fa-file-alt"></i></div>
+                    <div class="pub-content">
+                        <h3>Design of Compact and Energy Efficient Banyan Network</h3>
+                        <p class="pub-venue">2021 DISCOVER</p>
+                        <span class="pub-link">View Paper <i class="fas fa-external-link-alt"></i></span>
+                    </div>
+                </a>
+                <a href="https://ieeexplore.ieee.org/document/9489011" target="_blank" class="publication-item reveal reveal-delay-4">
+                    <div class="pub-icon"><i class="fas fa-file-alt"></i></div>
+                    <div class="pub-content">
+                        <h3>Area and Energy Efficient QCA based Decoder</h3>
+                        <p class="pub-venue">ICCES 2021</p>
+                        <span class="pub-link">View Paper <i class="fas fa-external-link-alt"></i></span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label reveal">Credentials</span>
+                <h2 class="section-title reveal reveal-delay-1">Certifications & Awards</h2>
+            </div>
+            <div class="certs-grid">
+                <a href="https://drive.google.com/file/d/1hbyVdSQLnyE9k44vvczMtdAPvGEBKhk7/view" target="_blank" class="cert-card reveal reveal-delay-2">
+                    <div class="cert-icon"><i class="fas fa-cloud"></i></div>
+                    <h3>Oracle Cloud Infrastructure Certified Foundations Associate</h3>
+                    <p>September 2024</p>
+                    <span class="cert-link">View Credential <i class="fas fa-external-link-alt"></i></span>
+                </a>
+                <a href="https://www.credly.com/badges/a9752113-eabc-42b6-b175-265bc252bf6d?source=linked_in_profile" target="_blank" class="cert-card reveal reveal-delay-3">
+                    <div class="cert-icon"><i class="fab fa-google"></i></div>
+                    <h3>Google IT Automation with Python Professional Certificate</h3>
+                    <p>August 2020</p>
+                    <span class="cert-link">View Credential <i class="fas fa-external-link-alt"></i></span>
+                </a>
+                <a href="https://drive.google.com/file/d/1_KF9kJTWQ6pjkwkP5hWCLOkTf-z_Ss_I/view" target="_blank" class="cert-card reveal reveal-delay-4">
+                    <div class="cert-icon"><i class="fas fa-award"></i></div>
+                    <h3>LADDERS Employee Recognition Award</h3>
+                    <p>February 2024</p>
+                    <span class="cert-link">View Credential <i class="fas fa-external-link-alt"></i></span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label reveal">Say Hello</span>
+                <h2 class="section-title reveal reveal-delay-1">Get In Touch</h2>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info reveal reveal-delay-2">
+                    <h3>Let's work together!</h3>
+                    <p>I'm always interested in new opportunities and exciting projects. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>skanda473@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>+1 (413) 315-1438</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Location</h4>
+                                <p>Amherst, USA</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://linkedin.com/in/skandac" class="social-link" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/skandac" class="social-link" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://twitter.com/Skac_D" class="social-link" target="_blank">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://instagram.com/skanda.c/" class="social-link" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-form reveal reveal-delay-3">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">
+                            Send Message
+                            <span class="btn-arrow">&rarr;</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Skanda<span class="logo-dot">.</span></h2>
+                </div>
+                <p>Designed & built with care.</p>
+                <p class="footer-copy">&copy; 2025 Skanda Chandrashekar. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="three.min.js"></script>
+    <script src="vanta.birds.min.js"></script>
+    <script src="vanta.dots.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
